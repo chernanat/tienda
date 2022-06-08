@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('category');
             $table->bigInteger('quantity');
             $table->bigInteger('price');
+            $table->timestamp('updated_at');
             $table->timestamp('created_at');
         });
     }

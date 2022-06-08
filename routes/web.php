@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Product;
+use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,9 +33,16 @@ Route::get('/home',function () {
 });
 
 Route::get('/admin',function () {
-    return view('admin');
+    $product = Product::all();
+    $category = Category::all();
+    $category2 = Category::all();
+    return view('admin',compact('category','product','category2'));
 });
     
+Route::post('/insertar_producto',[\App\Http\Controllers\ProductController::class,'store']);
+
+Route::post('/insertar_categoria',[\App\Http\Controllers\CategoryController::class,'store']);
+
 Route::post('/insertar',[\App\Http\Controllers\UserController::class,'store']);
 
 Route::post('/login',[\App\Http\Controllers\LoginController::class,'login']);
