@@ -13,21 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//vistas
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
 Route::get('/registro',function () {
     return view('registro');
 });// Route::get('/registro' function(){
 
-Route::get('/login',function () {
-    return view('login');
+Route::get('/registro',function () {
+    return view('registro');
     });
 
-Route::get('/registro',function () {
-        return view('registro');
-        });
+Route::get('/admin',function () {
+    return view('admin');
+    });
     
 Route::post('/insertar',[\App\Http\Controllers\UserController::class,'store']);
 

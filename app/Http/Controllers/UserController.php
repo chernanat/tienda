@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function store(Request $request){
+    public function store(UserRequest $request){
         $person = new User($request->all());
         $person->save();
         return back();
@@ -25,7 +25,7 @@ class UserController extends Controller
         return view('edit',compact('person'));
     }
 
-    public function update(UserRequest $request,$id){
+    public function update(Request $request,$id){
         $person = User::find($id);
         $person->update($request->all());
         

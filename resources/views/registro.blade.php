@@ -1,4 +1,5 @@
 @extends('nav');
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -21,7 +22,7 @@
         </div>
         <div>
             <label class="form-label" for="">Correo:</label>
-            <input class="form-control" type="text" name="email">
+            <input class="form-control" type="email" name="email">
         </div>
         <div>
             <label class="form-label" for="">Contrasena:</label>
@@ -34,3 +35,4 @@
     </form>
 </body>
 </html>
+@endsection

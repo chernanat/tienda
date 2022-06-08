@@ -32,12 +32,12 @@
             <form action="/login" method="POST" class="form-control">           
                 <div> 
                     <div class="">
-                        <label class="form-label" for="">Usuario:</label>
-                        <input class="form-control" type="text" name="usuario" id="usuario">
+                        <label class="form-label" for="">Correo:</label>
+                        <input class="form-control" type="" name="email">
                     </div>
                     <label class="form-label" for="contra">Contraseña:</label>
                     <div class="">
-                        <input class="form-control" type="password" name="contra" id="contra">
+                        <input class="form-control" type="password" name="password">
                     </div>
                     <br>
                     <div class="d-grid gap-2">

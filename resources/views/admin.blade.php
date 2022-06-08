@@ -3,12 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Login</title>
+
+        <title>Admin</title>
+
         <!-- Fonts -->
-        <link href="" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{mix('css/app.css')}}">
         <!-- Styles -->
         <style>
+
+        </style>
+
+        <style>
+
         </style>
     </head>
     <body class="antialiased">
@@ -20,6 +27,6 @@
                 <a class="navbar-brand" href="/registro">Registro</a>   
             </div>
         </nav>
-        @yield('content')
+        <br>
     </body>
 </html>
