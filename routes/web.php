@@ -29,4 +29,6 @@ Route::get('/registro',function () {
         return view('registro');
         });
     
+Route::post('/insertar',[\App\Http\Controllers\UserController::class,'store']);
+
 // })

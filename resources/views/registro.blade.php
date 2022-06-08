@@ -14,21 +14,18 @@
     </head>
 <body>
     <form class="form-control" action="/insertar" method="post">
+        @csrf
         <div>
             <label class="form-label" for="">Nombre:</label>
-            <input class="form-control" type="text" name="nombre" id="nombre">
+            <input class="form-control" type="text" name="name">
         </div>
         <div>
-            <label class="form-label" for="">Apellido:</label>
-            <input class="form-control" type="text" name="apellido" id="apellido>">
+            <label class="form-label" for="">Correo:</label>
+            <input class="form-control" type="text" name="email">
         </div>
         <div>
-            <label class="form-label" for="">Edad:</label>
-            <input class="form-control" type="number" name="edad" id="edad">
-        </div>
-        <div>
-            <label class="form-label" for="">Telefono:</label>
-            <input class="form-control" type="tel" name="telefono" id="telefono">
+            <label class="form-label" for="">Contrasena:</label>
+            <input class="form-control" type="password" name="password">
         </div>
         <br>
         <div class="d-grid gap-2">
