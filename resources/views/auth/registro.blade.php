@@ -22,10 +22,10 @@
         </div>
         <div>
             <label class="form-label" for="">Correo:</label>
-            <input class="form-control" type="email" name="email">
+            <input class="form-control" type="text" name="email">
         </div>
         <div>
-            <label class="form-label" for="">Contrasena:</label>
+            <label class="form-label" for="">Contraseña:</label>
             <input class="form-control" type="password" name="password">
         </div>
         <br>

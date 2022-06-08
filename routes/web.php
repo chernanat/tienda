@@ -15,21 +15,21 @@ use Illuminate\Support\Facades\Route;
 
 //vistas
 Route::get('/', function () {
-    return view('login');
+    return view('auth.loggin');
+});
+
+Route::get('/login', function () {
+    return view('auth.loggin');
 });
 
 Route::get('/registro',function () {
-    return view('registro');
-});// Route::get('/registro' function(){
+    return view('auth.registro');
+});
 
-Route::get('/registro',function () {
-    return view('registro');
-    });
-
-Route::get('/admin',function () {
-    return view('admin');
-    });
+Route::get('/home',function () {
+    return view('home');
+});
     
 Route::post('/insertar',[\App\Http\Controllers\UserController::class,'store']);
 
-// })
+Route::post('/login',[\App\Http\Controllers\LoginController::class,'login']);

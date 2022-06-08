@@ -10,7 +10,7 @@ class UserController extends Controller
     public function store(UserRequest $request){
         $person = new User($request->all());
         $person->save();
-        return back();
+        return redirect('/login')->with('Success', 'Account created successfully');
     }
 
     public function delete($id){

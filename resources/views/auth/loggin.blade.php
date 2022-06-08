@@ -29,7 +29,8 @@
         </nav>
         <br>
         <h4>Inicio de sesion</h4>
-            <form action="/login" method="POST" class="form-control">           
+            <form action="/login" method="post" class="form-control">    
+                @csrf       
                 <div> 
                     <div class="">
                         <label class="form-label" for="">Correo:</label>
