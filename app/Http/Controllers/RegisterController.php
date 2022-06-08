@@ -13,5 +13,4 @@ class RegisterController extends Controller
         }
         return view('auth.registro');
     }
-
 }

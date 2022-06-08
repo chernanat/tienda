@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Home</h1>
-</body>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Login</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{mix('css/app.css')}}">
+        <!-- Styles -->
+        <style>
+
+        </style>
+
+        <style>
+
+        </style>
+    </head>
+    <body class="antialiased">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">  
+                <a  class="navbar-brand" href="">Tienda.com</a>
+            </div>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="">Carrito</a>   
+            </div>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/registro">Log out</a>   
+            </div>
+        </nav>
+
+        <div>
+            <h1>Tienda.com</h1>
+            <h2>Productos</h2>
+        </div>
+    </body>
 </html>
