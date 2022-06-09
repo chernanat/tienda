@@ -45,10 +45,16 @@
                     <p class="card-text">Cantidad: {{$product->quantity}}</p>
                     <p class="card-text">Precio: $ {{$product->price}}</p>
                     </div>
-                    <form action="" method="post">
-                        
+                    <form action="/insertar_carrito" method="post">
+                        @csrf
+                        <input type="hidden" name="email" value="p@hotmail.com">
+                        <input type="hidden" name="name" value="nombre">
+                        <input type="hidden" name="product" value="{{$product->name}}">
+                        <input type="hidden" name="category" value="{{$product->category}}">
+                        <input type="hidden" name="quantity" value="{{$product->quantity}}">
+                        <input type="hidden" name="price" value="{{$product->price}}">
                         <div>
-                            <input class="btn btn-outline-success" type="button" value="AGREGAR AL CARRITO">
+                            <input class="btn btn-outline-success" type="submit" value="AGREGAR AL CARRITO">
                         </div>
                     </form>
                 </div>

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('product');
             $table->string('category');
             $table->bigInteger('quantity');
-            $table->string('price');
+            $table->bigInteger('price');
             $table->timestamp('updated_at');
             $table->timestamp('created_at');
         });

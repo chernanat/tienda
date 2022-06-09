@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Cart;
 use Illuminate\Support\Facades\Route;
 use App\Models\Product;
 use App\Models\Category;
@@ -29,7 +30,8 @@ Route::get('/registro',function () {
 });
 
 Route::get('/carrito',function () {
-    return view('carrito');
+    $cart = Cart::all();
+    return view('carrito',compact('cart'));
 });
 
 Route::get('/home',function () {
@@ -60,6 +62,10 @@ Route::get('/editar_categoria/{id}',[\App\Http\Controllers\CategoryController::c
 Route::get('/eliminar_producto/{id}',[\App\Http\Controllers\ProductController::class,'delete']);
 
 Route::get('/eliminar_categoria/{id}',[\App\Http\Controllers\CategoryController::class,'delete']);
+
+Route::post('/insertar_carrito',[\App\Http\Controllers\CartController::class,'store']);
+
+Route::post('/eliminar_carrito',[\App\Http\Controllers\CartController::class,'delete']);
 
 Route::post('/insertar',[\App\Http\Controllers\UserController::class,'store']);
 
