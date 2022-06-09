@@ -65,7 +65,7 @@ Route::get('/eliminar_categoria/{id}',[\App\Http\Controllers\CategoryController:
 
 Route::post('/insertar_carrito',[\App\Http\Controllers\CartController::class,'store']);
 
-Route::post('/eliminar_carrito',[\App\Http\Controllers\CartController::class,'delete']);
+Route::get('/eliminar_carrito/{id}',[\App\Http\Controllers\CartController::class,'delete']);
 
 Route::post('/insertar',[\App\Http\Controllers\UserController::class,'store']);
 

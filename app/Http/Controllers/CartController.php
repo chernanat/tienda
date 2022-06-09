@@ -16,6 +16,7 @@ class CartController extends Controller
 
     public function delete($id){
         $cart = Cart::find($id);
+        // return request($cart);
         $cart->delete();
         return back();
     }
