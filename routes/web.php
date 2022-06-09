@@ -41,7 +41,19 @@ Route::get('/admin',function () {
     
 Route::post('/insertar_producto',[\App\Http\Controllers\ProductController::class,'store']);
 
+Route::post('/editar_producto/{id}',[\App\Http\Controllers\ProductController::class,'update']);
+
+Route::get('/editar_producto/{id}',[\App\Http\Controllers\ProductController::class,'edit']);
+
 Route::post('/insertar_categoria',[\App\Http\Controllers\CategoryController::class,'store']);
+
+Route::post('/editar_categoria/{id}',[\App\Http\Controllers\CategoryController::class,'update']);
+
+Route::get('/editar_categoria/{id}',[\App\Http\Controllers\CategoryController::class,'edit']);
+
+Route::get('/eliminar_producto/{id}',[\App\Http\Controllers\ProductController::class,'delete']);
+
+Route::get('/eliminar_categoria/{id}',[\App\Http\Controllers\CategoryController::class,'delete']);
 
 Route::post('/insertar',[\App\Http\Controllers\UserController::class,'store']);
 

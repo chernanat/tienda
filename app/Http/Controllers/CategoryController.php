@@ -9,25 +9,25 @@ use Illuminate\Http\Request;
 class CategoryController extends Controller
 {
     public function store(CategoryRequest $request){
-        $person = new Category($request->all());
-        $person->save();
+        $category = new Category($request->all());
+        $category->save();
         return redirect('/admin')->with('Success', 'Account created successfully');
     }
 
     public function delete($id){
-        $person = Category::find($id);
-        $person->delete();
+        $category = Category::find($id);
+        $category->delete();
         return back();
     }
 
     public function edit($id){
-        $person = Category::find($id);
-        return view('edit',compact('person'));
+        $category = Category::find($id);
+        return view('auth.edit_category',compact('category'));
     }
 
     public function update(Request $request,$id){
-        $person = Category::find($id);
-        $person->update($request->all());
+        $category = Category::find($id);
+        $category->update($request->all());
         
         return back();
     }
