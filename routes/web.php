@@ -28,6 +28,10 @@ Route::get('/registro',function () {
     return view('auth.registro');
 });
 
+Route::get('/carrito',function () {
+    return view('carrito');
+});
+
 Route::get('/home',function () {
     $product = Product::all();
     $category = Category::all();
