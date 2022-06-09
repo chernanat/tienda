@@ -29,7 +29,9 @@ Route::get('/registro',function () {
 });
 
 Route::get('/home',function () {
-    return view('home');
+    $product = Product::all();
+    $category = Category::all();
+    return view('home',compact('category','product'));
 });
 
 Route::get('/admin',function () {

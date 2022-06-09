@@ -34,6 +34,23 @@
         <div>
             <h1>Tienda.com</h1>
             <h2>Productos</h2>
+            @foreach ($category as $category)
+                <h3 >CATEGORIA: {{$category->name}}</h3>
+            @endforeach
+        </div>
+        <div class="col-3">
+            @foreach ($product as $product)
+            <div class="card border-secondary mb-3" style="max-width: 20rem;">
+                <div class="card-header">{{$product->name}}</div>
+                <div class="card-body">
+                  <h4 class="card-title">Secondary card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div>
+                    <input class="btn btn-outline-success" type="button" value="AGREGAR AL CARRITO">
+                </div>
+            </div>
+            @endforeach
         </div>
     </body>
 </html>
