@@ -25,10 +25,9 @@ class CategoryController extends Controller
         return view('auth.edit_category',compact('category'));
     }
 
-    public function update(Request $request,$id){
+    public function update(CategoryRequest $request,$id){
         $category = Category::find($id);
         $category->update($request->all());
-        
         return back();
     }
 }

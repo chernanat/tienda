@@ -28,7 +28,6 @@ class UserController extends Controller
     public function update(Request $request,$id){
         $person = User::find($id);
         $person->update($request->all());
-        
         return back();
     }
 }

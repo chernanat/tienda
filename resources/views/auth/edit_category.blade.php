@@ -1,19 +1,12 @@
-@extends('admin')
-<h1>EDIT USER: {{$category->name}}</h1>
+@extends('auth.admin')
+<h1>Editar Categoria: {{$category->name}}</h1>
 
-<form action="/editar_categoria/{{$person->id}}" method="POST">
+<form action="/editar_categoria/{{$category->id}}" method="POST">
     @csrf
-    <label for="">Name</label>
-    <input type="text" name="name" id="" value="{{$person->name}}">
+    <label for="">Nombre:</label>
+    <input class="form-control" type="text" name="name" id="" value="{{$category->name}}">
     <br>
-    <label for="">Phone</label>
-    <input type="number" name="phone" id="" value="{{$person->phone}}">
-    <br>
-    <label for="">Lastname</label>
-    <input type="text" name="lastname" id="" value="{{$person->lastname}}">
-    <br>
-    <input type="submit" value="UPDATE">
+    <input type="submit" value="Actualizar">
 </form>
 <br>
-
 <a href="/">Volver</a>

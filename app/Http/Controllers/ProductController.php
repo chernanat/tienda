@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductRequest;
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -22,14 +23,13 @@ class ProductController extends Controller
 
     public function edit($id){
         $product = Product::find($id);
-        return request($product);
-        // return view('auth.edit_product',compact('product'));
+        $category2 = Category::all();
+        return view('auth.edit_product',compact('product','category2'));
     }
 
-    public function update(Request $request,$id){
+    public function update(ProductRequest $request,$id){
         $product = Product::find($id);
         $product->update($request->all());
-        
         return back();
     }
 }
